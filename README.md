@@ -1,1 +1,1 @@
-# Fighter
+# Combat plugin
