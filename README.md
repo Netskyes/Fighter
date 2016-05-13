@@ -1,1 +1,1 @@
-"# Fighter"
+# Fighter
