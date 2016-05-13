@@ -40,13 +40,23 @@ namespace Fighter
         private Swap temp;
         private bool swapActive = false;
 
+        private List<string> buffs;
+
         private List<int> toLoot = new List<int>();
 
 
         private void Initialize()
         {
             template = UI.FetchTemplate();
-            rotation = template.skills.rotation;
+
+            // Build rotation
+            rotation = template.buffs.combat;
+            rotation = rotation.Concat(template.skills.rotation).ToList();
+
+            // GroupUp buffs
+            buffs = template.buffs.combat;
+            buffs = buffs.Concat(template.buffs.preCombat).ToList();
+
 
             // Register events
             host.onLootAvailable += onLootAvailable;
@@ -55,68 +65,79 @@ namespace Fighter
 
 
 
-        private void CheckState()
+        private void Check()
         {
+            if (template.skills.rotation.Count < 1) return;
+
             combatState = CombatState.Search;
         }
 
-        private void SearchState()
+        private void Search()
         {
-            if(UnderAttack())
+            bool uAttack = false;
+
+            if((uAttack = UnderAttack()))
             {
                 GetTarget(host.getAggroMobs());
             }
             else GetTarget();
 
 
-            if (target != null)
+            if (target != null && host.isExists(target))
             {
-                combatState = (host.dist(target) > 30) ? CombatState.Move : CombatState.Fight;
+                if(uAttack)
+                {
+                    combatState = CombatState.Fight;
+                }
+                else
+                {
+                    combatState = (host.dist(target) > (20 - 1)) ? CombatState.Move : CombatState.Ready;
+                }
             }
         }
 
-        private void MoveState()
+        private void Move()
         {
-            bool isMoveDone = false;
-
-            Task.Run(() =>
+            if(ComeToTarget(20 - 1))
             {
-                while(!isMoveDone)
-                {
-                    IsCancelTask();
-
-                    // checks
-                    if (host.dist(target) <= 20) host.CancelMoveTo();
-
-
-                    Utils.Delay(50, token);
-                }
-            }, token);
-
-            isMoveDone = host.ComeTo(target);
-
-
-            if(isMoveDone)
-            {
-                combatState = CombatState.Fight;
+                combatState = CombatState.Ready;
             }
             else
             {
-                isMoveDone = true;
                 combatState = CombatState.Search;
             }
         }
-        
-        private void FightState()
+
+        private void Ready()
+        {
+            if(template.buffs.preCombat.Count > 0)
+            {
+                SwapRotation(template.buffs.preCombat);
+            }
+
+            combatState = CombatState.Fight;
+        }
+
+        private void Fight()
         {
             if (IsCasting()) return;
 
 
-            if (target != null && IsAttackable(target))
-            {
-                if (host.me.target != target) host.SetTarget(target);
+            bool isMeTarget = true;
 
-                
+            if(UnderAttack(target))
+            {
+                isMeTarget = (target.target == host.me);
+            }
+
+
+            if (target != null && isMeTarget && IsAttackable(target))
+            {
+                if (host.me.target != target)
+                {
+                    host.SetTarget(target);
+                }
+
                 if (!IsDisabled(host.me) && !IsSilenced(host.me))
                 {
                     DoRotation();
@@ -129,37 +150,36 @@ namespace Fighter
                 return;
             }
 
-            if (swapActive) RestoreSwap();
-            
+            if (swapActive) RestoreSwap(true);
+            sequence = 0;
 
-            
-            if(prefs.lootEnabled && toLoot.Count > 0)
+            combatState = CombatState.Analyze;
+        }
+
+        private void Analyze()
+        {
+            if(UnderAttack())
+            {
+                combatState = CombatState.Check;
+                return;
+            }
+
+            if (prefs.lootEnabled && toLoot.Count > 0)
             {
                 Utils.Delay(850, 1250, token);
 
-                if (!UnderAttack())
+                var loot = host.getCreatures().Find(c => toLoot.Contains(c.GetHashCode()));
+
+                if (loot != null)
                 {
-                    combatState = CombatState.Control;
+                    host.ComeTo(loot);
+
+                    host.PickupAllDrop(loot);
+                    toLoot.Remove(loot.GetHashCode());
+
                     return;
                 }
-            }
 
-            combatState = CombatState.Check;
-        }
-
-        private void ControlSate()
-        {
-            var loot = host.getCreatures().Find(c => toLoot.Contains(c.GetHashCode()));
-            
-            if(loot != null)
-            {
-                host.ComeTo(loot);
-                
-                host.PickupAllDrop(loot);
-                toLoot.Remove(loot.GetHashCode());
-                
-
-                return;
             }
 
             combatState = CombatState.Check;
@@ -176,27 +196,32 @@ namespace Fighter
                 {
                     case CombatState.Check:
                         //Log("State: Check");
-                        CheckState();
+                        Check();
                         break;
 
                     case CombatState.Search:
                         //Log("State: Search");
-                        SearchState();
+                        Search();
                         break;
 
                     case CombatState.Move:
                         //Log("State: Move");
-                        MoveState();
+                        Move();
+                        break;
+
+                    case CombatState.Ready:
+                        //Log("State: Ready");
+                        Ready();
                         break;
 
                     case CombatState.Fight:
                         //Log("State: Fight");
-                        FightState();
+                        Fight();
                         break;
 
-                    case CombatState.Control:
-                        //Log("State: Control");
-                        ControlSate();
+                    case CombatState.Analyze:
+                        //Log("State: Analyze");
+                        Analyze();
                         break;
                 }
             }
@@ -238,13 +263,13 @@ namespace Fighter
             sequence = 0;
         }
 
-        private void RestoreSwap()
+        private void RestoreSwap(bool skipSeq = false)
         {
             rotation = temp.rotation;
             sequence = temp.sequence;
 
             swapActive = false;
-            Sequence();
+            if(!skipSeq) Sequence();
         }
 
         private void DoRotation()
@@ -256,13 +281,12 @@ namespace Fighter
                 Sequence(); return;
             }
 
-            SqlSkill ssk = GetSQLSkill(sk.id);
+            bool isBuff = buffs.Contains(sk.name);
 
-
-            SkillBehavior sb = SkillGet.behavior(sk.id);
 
             int optimalWait = 375;
 
+            SkillBehavior sb = SkillGet.behavior(sk.id);
 
             if (sb != null)
             {
@@ -270,8 +294,7 @@ namespace Fighter
             }
 
 
-
-            if (!swapActive && ssk.cooldownTime != 0 && !CanCastSkill(sk))
+            if (!swapActive && sk.db.cooldownTime != 0 && !CanCastSkill(sk))
             {
                 Sequence(); return;
             }
@@ -280,7 +303,7 @@ namespace Fighter
             Combos combos = null;
             bool isComboExists = false;
 
-            if (!swapActive)
+            if (!swapActive && !isBuff)
             {
                 combos = template.skills.combos.Find(c => (c.triggerName == sk.name));
 
@@ -294,32 +317,23 @@ namespace Fighter
             }
 
 
-            if (SkillGet.hasNoAutoCome(sk.id))
-            {
-                if(host.dist(target) > ssk.maxRange)
-                {
-                    ComeToTarget(ssk.maxRange, true);
-                }
-            }
-
+            IsCancelTask();
 
             bool isCastSuccess = false;
 
             if (!SkillGet.hasLocationTarget(sk.id))
             {
-                isCastSuccess = UseSkill(sk);
+                isCastSuccess = UseSkill(sk, false, isBuff, !isBuff);
             }
             else
             {
-                isCastSuccess = UseSkill(sk.id, target);
+                isCastSuccess = UseSkill(sk, true);
             }
 
 
             if (isCastSuccess)
             {
-                Log("Used: " + sk.name);
-                Utils.Delay(optimalWait, token);
-
+                Log("Used: " + sk.name); Utils.Delay(optimalWait, token);
 
                 if (!swapActive && isComboExists)
                 {
@@ -331,15 +345,13 @@ namespace Fighter
             Sequence();
         }
 
-
-
-        private void ComeToTarget(int radius, bool faceTarget)
+        private void DoReadyBuffs()
         {
-            if(host.ComeTo(target))
-            {
-                if (faceTarget) host.TurnDirectly(target);
-            }
+            
         }
+
+
+
 
         private void GetTarget(List<Creature> mobs = null)
         {
@@ -352,6 +364,7 @@ namespace Fighter
                     zone.ObjInZone(c)
                     && IsAttackable(c)
                     && host.isAttackable(c)
+                    && host.getAggroMobsCount(c) == 0
                     && (!prefs.ignoredMobs.Contains(c.name))
 
                 ).ToList();
@@ -379,10 +392,74 @@ namespace Fighter
             targetHash = target.GetHashCode();
         }
 
+        private bool ComeToTarget(double distance)
+        {
+            bool isMoveDone = false;
+
+            Task.Run(() =>
+            {
+                while (!isMoveDone)
+                {
+                    IsCancelTask();
+
+                    // Conditions
+                    if (IsDisabled(host.me) || UnderAttack()) break;
+
+
+                    Utils.Delay(50, token);
+                }
+
+                host.CancelMoveTo();
+
+            }, token);
+
+
+            isMoveDone = host.ComeTo(target, distance);
+            
+
+            if (isMoveDone)
+            {
+                return true;
+            }
+            else
+            {
+                isMoveDone = true;
+                return false;
+            }
+        }
+
+        public bool UseSkill(Skill skill, bool isTarget = false, bool selfTarget = false, bool autoCome = true)
+        {
+            if (autoCome && (host.dist(target) > skill.db.maxRange))
+            {
+                double dist = host.me.calcSkillMaxRange(skill.id) - 1;
+
+                ComeToTarget(dist);
+            }
+
+
+            if (!isTarget)
+            {
+                return skill.UseSkill(false, selfTarget);
+            }
+            else
+            {
+                return host.UseSkill(skill.id, target.X, target.Y, target.Z, false);
+            }
+        }
+
+
+
 
         private void onLootAvailable(Creature obj)
         {
             if(obj.GetHashCode() == targetHash) toLoot.Add(obj.GetHashCode());
+        }
+
+
+        public void Flush()
+        {
+            host.onLootAvailable -= onLootAvailable;
         }
 
         private void IsCancelTask()

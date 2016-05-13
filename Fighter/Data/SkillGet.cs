@@ -10,14 +10,16 @@ namespace Fighter
     {
         public static SkillBehavior behavior(uint skillId)
         {
-            var dataSet = GetDataSet();
+            var dataSet = GetSkillsBehaviors();
 
             return (dataSet.ContainsKey(skillId)) ? dataSet[skillId] : null;
         }
 
-        public static bool hasNoAutoCome(uint skillId)
+        public static uint[] buffs(uint skillId)
         {
-            return getNoAutoComes().Contains(skillId);
+            var dataSet = GetProducedBuffs();
+
+            return (dataSet.ContainsKey(skillId)) ? dataSet[skillId] : null;
         }
 
         public static bool hasLocationTarget(uint skillId)
@@ -25,15 +27,7 @@ namespace Fighter
             return getLocationTargets().Contains(skillId);
         }
 
-        
 
-        private static uint[] getNoAutoComes()
-        {
-            return new uint[] 
-            {
-                Battlerage.WhirlwindSlash, Battlerage.SunderEarth
-            };
-        }
 
         private static  uint[] getLocationTargets()
         {
@@ -44,23 +38,38 @@ namespace Fighter
         }
 
 
-        private static Dictionary<uint, SkillBehavior> GetDataSet()
+        private static Dictionary<uint, uint[]> GetProducedBuffs()
         {
-            var behaviors = new Dictionary<uint, SkillBehavior>();
-
-            // Skill behavior properties
-            behaviors.Add(Sorcery.Flamebolt, new SkillBehavior()
+            return new Dictionary<uint, uint[]>()
             {
-                optimalWait = 50
-            });
+                { Auramancy.HealthLift, new uint[] { 794, 795, 796, 841, 1423, 1424, 1425, 7655, 13867, 13868 } },
+                { Witchcraft.Purge, new uint[] { 11, 4133, 4134, 6078, 6956 } },
+                { Witchcraft.CourageousAction, new uint[] { 374, 499, 2802, 4700 } },
+                { Sorcery.InsulatingLens, new uint[] { 95, 426, 427, 428, 429, 1011, 1661, 1760, 1878, 3911, 13802, 13803, 15638, 16870, 16871, 16872, 16927, 16928 } },
+                { Archery.DoubleRecurve, new uint[] { 451, 452, 453, 454, 7658 } },
+                { Vitalism.MirrorLight, new uint[] { 370, 552, 15211 } },
+                { Vitalism.Resurgence, new uint[] { 220, 3455, 6903 } },
+                { Vitalism.AranzebsBoon, new uint[] { 2955, 2956, 7661, 13790, 13791 } },
+                { Vitalism.Renewal, new uint[] { 3533, 3534, 3568, 3569, 13797, 13798 } },
+                { Songcraft.Quickstep, new uint[] { 656, 657, 658, 659, 660, 800, 801, 802, 803, 804, 2183, 2184, 2185, 2186, 2187 } },
+                { Songcraft.HummingbirdDitty, new uint[] { 462, 463, 464, 465, 466, 13782 } },
+                { Songcraft.OdeToRecovery, new uint[] { 662, 663, 664, 1024, 2190, 2191, 2192, 4540, 4541, 13783, 13784, 13785, 13786, 13787, 13788 } },
+                { Songcraft.BulwarkBallad, new uint[] { 778, 1000, 2199, 4386, 4387, 4389 } },
+                { Songcraft.BloodyChantey, new uint[] { 667, 850, 2196, 7662, 7663, 7664 } },
+                { Songcraft.GriefsCadence, new uint[] { 6830, 6836, 6844 } },
+                { Occultism.Urgency, new uint[] { 542, 4252, 7657 } },
+                { Defense.Refreshment, new uint[] { 53, 331, 332, 333, 334, 1417, 1418, 1419, 1420, 1422, 6081, 7652, 7653, 13620, 13621, 13622, 13623 } },
+                { Defense.Toughen, new uint[] { 445, 446, 447, 448, 1426, 1427, 1428, 1429, 4535, 13627, 13628, 13629, 13630 } }
+            };
+        }
 
-            behaviors.Add(Battlerage.WhirlwindSlash, new SkillBehavior()
+        private static Dictionary<uint, SkillBehavior> GetSkillsBehaviors()
+        {
+            return new Dictionary<uint, SkillBehavior>()
             {
-                optimalWait = 425
-            });
-
-
-            return behaviors;
+                { Sorcery.Flamebolt, new SkillBehavior() { optimalWait = 50 }},
+                { Battlerage.WhirlwindSlash, new SkillBehavior() { optimalWait = 425 } }
+            };
         }
 
         internal struct Battlerage

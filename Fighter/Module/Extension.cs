@@ -21,27 +21,6 @@ namespace Fighter
             host.Log(text);
         }
 
-        public SqlSkill GetSQLSkill(uint skillId)
-        {
-            return host.getSkill(skillId).db;
-        }
-        
-        
-        public bool UseSkill(Skill skill, bool selfTarget = false)
-        {
-            return skill.UseSkill(true, selfTarget);
-        }
-
-        public bool UseSkill(uint skillId, SpawnObject obj)
-        {
-            return host.UseSkill(skillId, obj.X, obj.Y, obj.Z, true);
-        }
-
-        public bool UseItem(Item item, bool selfTarget = false)
-        {
-            return item.UseItem(true);
-        }
-
         public bool CanCastSkill(Skill skill)
         {
             return (skill != null && (host.skillCooldown(skill) == 0));
@@ -65,6 +44,11 @@ namespace Fighter
         public bool UnderAttack()
         {
             return (host.getAggroMobsCount() > 0);
+        }
+
+        public bool UnderAttack(Creature obj)
+        {
+            return (host.getAggroMobsCount(obj) > 0);
         }
 
         public bool IsCasting()

@@ -77,7 +77,7 @@ namespace Fighter
             UI.UpdateButtonState("Stop");
         }
 
-        public void Stop()
+        public void Stop(bool shutdown = false)
         {
             ts.Cancel();
             CancelActions();
@@ -89,6 +89,9 @@ namespace Fighter
         public void CancelActions()
         {
             host.CancelMoveTo(); host.CancelSkill();
+
+            // Flush module actions
+            combatModule.Flush();
         }
 
         private void IsCancelTask()

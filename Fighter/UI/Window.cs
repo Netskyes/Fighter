@@ -240,7 +240,7 @@ namespace Fighter
             });
         }
 
-        private void CombosMove(int direction)
+            
         {
             Utils.InvokeOn(lbox_Combos, () => Utils.InvokeOn(lbox_ComboTriggers, () =>
             {
@@ -269,15 +269,15 @@ namespace Fighter
 
         private void btn_AddToComboTriggers_Click(object sender, EventArgs e)
         {
-            Utils.InvokeOn(lbox_AllSkills, () =>
+            Utils.InvokeOn(lbox_Rotation, () =>
             {
-                if(lbox_AllSkills.SelectedItem != null)
+                if(lbox_Rotation.SelectedItem != null)
                 {
                     Utils.InvokeOn(lbox_ComboTriggers, () =>
                     {
-                        if(!ComboTriggers.ContainsKey(lbox_AllSkills.Text))
+                        if(!ComboTriggers.ContainsKey(lbox_Rotation.Text))
                         {
-                            lbox_ComboTriggers.Items.Add(lbox_AllSkills.SelectedItem); ComboTriggers.Add(lbox_AllSkills.Text, new List<string>());
+                            lbox_ComboTriggers.Items.Add(lbox_Rotation.SelectedItem); ComboTriggers.Add(lbox_Rotation.Text, new List<string>());
                         }
                     });
                 }

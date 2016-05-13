@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Fighter
+﻿namespace Fighter
 {
     public enum FightMode
     {
         Auto,
-        Manual
+        Manual,
+        Support
     }
 }

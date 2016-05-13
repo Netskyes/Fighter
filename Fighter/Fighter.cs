@@ -94,7 +94,7 @@ namespace Fighter
 
         public static string GetPluginVersion()
         {
-            return "1.0.0";
+            return "1.0.0.2";
         }
     }
 }

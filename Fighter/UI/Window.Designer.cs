@@ -43,15 +43,36 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label10 = new System.Windows.Forms.Label();
+            this.container9 = new Fighter.Container();
+            this.label14 = new System.Windows.Forms.Label();
+            this.container12 = new Fighter.Container();
+            this.cmbox_Mode = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.container10 = new Fighter.Container();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.container14 = new Fighter.Container();
+            this.cmbox_Templates = new System.Windows.Forms.ComboBox();
             this.btn_LoadTemplate = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.container15 = new Fighter.Container();
+            this.btn_SaveTemplate = new System.Windows.Forms.Button();
+            this.container8 = new Fighter.Container();
+            this.lbox_ComboTriggers = new System.Windows.Forms.ListBox();
+            this.container7 = new Fighter.Container();
+            this.lbox_CombatBuffs = new System.Windows.Forms.ListBox();
+            this.btn_ImportTemplate = new System.Windows.Forms.Button();
+            this.container6 = new Fighter.Container();
+            this.lbox_PreCombatBuffs = new System.Windows.Forms.ListBox();
             this.btn_DeleteTemplate = new System.Windows.Forms.Button();
+            this.container5 = new Fighter.Container();
+            this.lbox_Rotation = new System.Windows.Forms.ListBox();
+            this.container4 = new Fighter.Container();
+            this.lbox_AllSkills = new System.Windows.Forms.ListBox();
+            this.container3 = new Fighter.Container();
+            this.lbox_Combos = new System.Windows.Forms.ListBox();
             this.btn_MoveCombatBuffsUp = new System.Windows.Forms.Button();
             this.btn_MoveCombatBuffsDown = new System.Windows.Forms.Button();
-            this.btn_ImportTemplate = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
             this.btn_MovePreCombatBuffsUp = new System.Windows.Forms.Button();
-            this.btn_SaveTemplate = new System.Windows.Forms.Button();
             this.btn_MovePreCombatBuffsDown = new System.Windows.Forms.Button();
             this.btn_MoveComboTriggersUp = new System.Windows.Forms.Button();
             this.btn_MoveComboTriggersDown = new System.Windows.Forms.Button();
@@ -60,43 +81,24 @@
             this.btn_MoveCombosUp = new System.Windows.Forms.Button();
             this.btn_MoveCombosDown = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btn_AddToIgnoredMobs = new System.Windows.Forms.Button();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.container1 = new Fighter.Container();
-            this.container14 = new Fighter.Container();
-            this.cmbox_Templates = new System.Windows.Forms.ComboBox();
-            this.container8 = new Fighter.Container();
-            this.lbox_ComboTriggers = new System.Windows.Forms.ListBox();
-            this.container7 = new Fighter.Container();
-            this.lbox_CombatBuffs = new System.Windows.Forms.ListBox();
-            this.container6 = new Fighter.Container();
-            this.lbox_PreCombatBuffs = new System.Windows.Forms.ListBox();
-            this.container5 = new Fighter.Container();
-            this.lbox_Rotation = new System.Windows.Forms.ListBox();
-            this.container4 = new Fighter.Container();
-            this.lbox_AllSkills = new System.Windows.Forms.ListBox();
-            this.container3 = new Fighter.Container();
-            this.lbox_Combos = new System.Windows.Forms.ListBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.container13 = new Fighter.Container();
+            this.num_ZoneRadius = new System.Windows.Forms.NumericUpDown();
+            this.chkbox_Loot = new System.Windows.Forms.CheckBox();
             this.container2 = new Fighter.Container();
             this.cmbox_Mobs = new System.Windows.Forms.ComboBox();
             this.container11 = new Fighter.Container();
             this.lbox_IgnoredMobs = new System.Windows.Forms.ListBox();
-            this.container9 = new Fighter.Container();
-            this.chkbox_Loot = new System.Windows.Forms.CheckBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.container13 = new Fighter.Container();
-            this.num_ZoneRadius = new System.Windows.Forms.NumericUpDown();
-            this.container12 = new Fighter.Container();
-            this.cmbox_Mode = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.container10 = new Fighter.Container();
-            this.label7 = new System.Windows.Forms.Label();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.container9.SuspendLayout();
+            this.container12.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage3.SuspendLayout();
             this.container14.SuspendLayout();
             this.container8.SuspendLayout();
             this.container7.SuspendLayout();
@@ -104,22 +106,22 @@
             this.container5.SuspendLayout();
             this.container4.SuspendLayout();
             this.container3.SuspendLayout();
-            this.container2.SuspendLayout();
-            this.container11.SuspendLayout();
-            this.container9.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.container1.SuspendLayout();
             this.container13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_ZoneRadius)).BeginInit();
-            this.container12.SuspendLayout();
+            this.container2.SuspendLayout();
+            this.container11.SuspendLayout();
             this.SuspendLayout();
             // 
             // button_Start
             // 
             this.button_Start.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Start.Location = new System.Drawing.Point(471, 12);
+            this.button_Start.Location = new System.Drawing.Point(492, 12);
             this.button_Start.Name = "button_Start";
-            this.button_Start.Size = new System.Drawing.Size(86, 29);
+            this.button_Start.Size = new System.Drawing.Size(65, 29);
             this.button_Start.TabIndex = 372;
-            this.button_Start.Text = "Start Combat";
+            this.button_Start.Text = "Fight";
             this.button_Start.UseVisualStyleBackColor = true;
             this.button_Start.Click += new System.EventHandler(this.button_Start_Click);
             // 
@@ -209,7 +211,7 @@
             // btn_AddToCombos
             // 
             this.btn_AddToCombos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AddToCombos.Location = new System.Drawing.Point(370, 266);
+            this.btn_AddToCombos.Location = new System.Drawing.Point(370, 291);
             this.btn_AddToCombos.Name = "btn_AddToCombos";
             this.btn_AddToCombos.Size = new System.Drawing.Size(44, 23);
             this.btn_AddToCombos.TabIndex = 359;
@@ -221,7 +223,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(420, 271);
+            this.label8.Location = new System.Drawing.Point(420, 296);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(45, 13);
             this.label8.TabIndex = 364;
@@ -253,8 +255,8 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.container1);
             this.tabPage2.Controls.Add(this.label10);
+            this.tabPage2.Controls.Add(this.container9);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -266,29 +268,92 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(18, 18);
+            this.label10.ForeColor = System.Drawing.Color.DimGray;
+            this.label10.Location = new System.Drawing.Point(29, 20);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(45, 13);
-            this.label10.TabIndex = 376;
+            this.label10.TabIndex = 375;
             this.label10.Text = "Settings";
+            // 
+            // container9
+            // 
+            this.container9.Controls.Add(this.label14);
+            this.container9.Controls.Add(this.container12);
+            this.container9.Controls.Add(this.label11);
+            this.container9.Controls.Add(this.container10);
+            this.container9.Location = new System.Drawing.Point(21, 27);
+            this.container9.Name = "container9";
+            this.container9.Padding = new System.Windows.Forms.Padding(12);
+            this.container9.Size = new System.Drawing.Size(284, 235);
+            this.container9.TabIndex = 374;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(23, 73);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(81, 13);
+            this.label14.TabIndex = 377;
+            this.label14.Text = "Manual settings";
+            // 
+            // container12
+            // 
+            this.container12.Controls.Add(this.cmbox_Mode);
+            this.container12.Location = new System.Drawing.Point(15, 37);
+            this.container12.Name = "container12";
+            this.container12.Padding = new System.Windows.Forms.Padding(3);
+            this.container12.Size = new System.Drawing.Size(99, 27);
+            this.container12.TabIndex = 378;
+            // 
+            // cmbox_Mode
+            // 
+            this.cmbox_Mode.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cmbox_Mode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbox_Mode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbox_Mode.FormattingEnabled = true;
+            this.cmbox_Mode.Items.AddRange(new object[] {
+            "Auto",
+            "Manual"});
+            this.cmbox_Mode.Location = new System.Drawing.Point(3, 3);
+            this.cmbox_Mode.Name = "cmbox_Mode";
+            this.cmbox_Mode.Size = new System.Drawing.Size(93, 21);
+            this.cmbox_Mode.TabIndex = 372;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(12, 20);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(59, 13);
+            this.label11.TabIndex = 375;
+            this.label11.Text = "Fight mode";
+            // 
+            // container10
+            // 
+            this.container10.Location = new System.Drawing.Point(15, 80);
+            this.container10.Name = "container10";
+            this.container10.Padding = new System.Windows.Forms.Padding(12);
+            this.container10.Size = new System.Drawing.Size(254, 46);
+            this.container10.TabIndex = 376;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.container14);
+            this.tabPage1.Controls.Add(this.btn_LoadTemplate);
+            this.tabPage1.Controls.Add(this.label9);
+            this.tabPage1.Controls.Add(this.container15);
+            this.tabPage1.Controls.Add(this.btn_SaveTemplate);
             this.tabPage1.Controls.Add(this.container8);
             this.tabPage1.Controls.Add(this.container7);
+            this.tabPage1.Controls.Add(this.btn_ImportTemplate);
             this.tabPage1.Controls.Add(this.container6);
+            this.tabPage1.Controls.Add(this.btn_DeleteTemplate);
             this.tabPage1.Controls.Add(this.container5);
             this.tabPage1.Controls.Add(this.container4);
             this.tabPage1.Controls.Add(this.container3);
-            this.tabPage1.Controls.Add(this.btn_LoadTemplate);
-            this.tabPage1.Controls.Add(this.btn_DeleteTemplate);
             this.tabPage1.Controls.Add(this.btn_MoveCombatBuffsUp);
             this.tabPage1.Controls.Add(this.btn_MoveCombatBuffsDown);
-            this.tabPage1.Controls.Add(this.btn_ImportTemplate);
-            this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.btn_MovePreCombatBuffsUp);
-            this.tabPage1.Controls.Add(this.btn_SaveTemplate);
             this.tabPage1.Controls.Add(this.btn_MovePreCombatBuffsDown);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.btn_MoveComboTriggersUp);
@@ -315,10 +380,29 @@
             this.tabPage1.Text = "Routine";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // container14
+            // 
+            this.container14.Controls.Add(this.cmbox_Templates);
+            this.container14.Location = new System.Drawing.Point(178, 27);
+            this.container14.Name = "container14";
+            this.container14.Padding = new System.Windows.Forms.Padding(3);
+            this.container14.Size = new System.Drawing.Size(133, 27);
+            this.container14.TabIndex = 386;
+            // 
+            // cmbox_Templates
+            // 
+            this.cmbox_Templates.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cmbox_Templates.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbox_Templates.FormattingEnabled = true;
+            this.cmbox_Templates.Location = new System.Drawing.Point(3, 3);
+            this.cmbox_Templates.Name = "cmbox_Templates";
+            this.cmbox_Templates.Size = new System.Drawing.Size(127, 21);
+            this.cmbox_Templates.TabIndex = 374;
+            // 
             // btn_LoadTemplate
             // 
             this.btn_LoadTemplate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_LoadTemplate.Location = new System.Drawing.Point(166, 35);
+            this.btn_LoadTemplate.Location = new System.Drawing.Point(320, 28);
             this.btn_LoadTemplate.Name = "btn_LoadTemplate";
             this.btn_LoadTemplate.Size = new System.Drawing.Size(44, 23);
             this.btn_LoadTemplate.TabIndex = 377;
@@ -326,16 +410,179 @@
             this.btn_LoadTemplate.UseVisualStyleBackColor = true;
             this.btn_LoadTemplate.Click += new System.EventHandler(this.btn_LoadTemplate_Click);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.DimGray;
+            this.label9.Location = new System.Drawing.Point(29, 20);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(51, 13);
+            this.label9.TabIndex = 388;
+            this.label9.Text = "Template";
+            // 
+            // container15
+            // 
+            this.container15.Location = new System.Drawing.Point(21, 27);
+            this.container15.Name = "container15";
+            this.container15.Padding = new System.Windows.Forms.Padding(12);
+            this.container15.Size = new System.Drawing.Size(133, 63);
+            this.container15.TabIndex = 387;
+            // 
+            // btn_SaveTemplate
+            // 
+            this.btn_SaveTemplate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SaveTemplate.Location = new System.Drawing.Point(370, 28);
+            this.btn_SaveTemplate.Name = "btn_SaveTemplate";
+            this.btn_SaveTemplate.Size = new System.Drawing.Size(44, 23);
+            this.btn_SaveTemplate.TabIndex = 376;
+            this.btn_SaveTemplate.Text = "Save";
+            this.btn_SaveTemplate.UseVisualStyleBackColor = true;
+            this.btn_SaveTemplate.Click += new System.EventHandler(this.btn_SaveTemplate_Click);
+            // 
+            // container8
+            // 
+            this.container8.Controls.Add(this.lbox_ComboTriggers);
+            this.container8.Location = new System.Drawing.Point(370, 147);
+            this.container8.Name = "container8";
+            this.container8.Padding = new System.Windows.Forms.Padding(3);
+            this.container8.Size = new System.Drawing.Size(133, 123);
+            this.container8.TabIndex = 385;
+            // 
+            // lbox_ComboTriggers
+            // 
+            this.lbox_ComboTriggers.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbox_ComboTriggers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbox_ComboTriggers.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lbox_ComboTriggers.FormattingEnabled = true;
+            this.lbox_ComboTriggers.Location = new System.Drawing.Point(3, 3);
+            this.lbox_ComboTriggers.Name = "lbox_ComboTriggers";
+            this.lbox_ComboTriggers.Size = new System.Drawing.Size(127, 117);
+            this.lbox_ComboTriggers.TabIndex = 360;
+            this.lbox_ComboTriggers.SelectedIndexChanged += new System.EventHandler(this.lbox_ComboTriggers_SelectedIndexChanged);
+            this.lbox_ComboTriggers.DoubleClick += new System.EventHandler(this.lbox_ComboTriggers_DoubleClick);
+            // 
+            // container7
+            // 
+            this.container7.Controls.Add(this.lbox_CombatBuffs);
+            this.container7.Location = new System.Drawing.Point(178, 320);
+            this.container7.Name = "container7";
+            this.container7.Padding = new System.Windows.Forms.Padding(3);
+            this.container7.Size = new System.Drawing.Size(133, 58);
+            this.container7.TabIndex = 384;
+            // 
+            // lbox_CombatBuffs
+            // 
+            this.lbox_CombatBuffs.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbox_CombatBuffs.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbox_CombatBuffs.FormattingEnabled = true;
+            this.lbox_CombatBuffs.Location = new System.Drawing.Point(3, 3);
+            this.lbox_CombatBuffs.Name = "lbox_CombatBuffs";
+            this.lbox_CombatBuffs.Size = new System.Drawing.Size(127, 52);
+            this.lbox_CombatBuffs.TabIndex = 356;
+            this.lbox_CombatBuffs.DoubleClick += new System.EventHandler(this.lbox_CombatBuffs_DoubleClick);
+            // 
+            // btn_ImportTemplate
+            // 
+            this.btn_ImportTemplate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ImportTemplate.Location = new System.Drawing.Point(474, 28);
+            this.btn_ImportTemplate.Name = "btn_ImportTemplate";
+            this.btn_ImportTemplate.Size = new System.Drawing.Size(48, 23);
+            this.btn_ImportTemplate.TabIndex = 378;
+            this.btn_ImportTemplate.Text = "Import";
+            this.btn_ImportTemplate.UseVisualStyleBackColor = true;
+            this.btn_ImportTemplate.Click += new System.EventHandler(this.btn_ImportTemplate_Click);
+            // 
+            // container6
+            // 
+            this.container6.Controls.Add(this.lbox_PreCombatBuffs);
+            this.container6.Location = new System.Drawing.Point(178, 428);
+            this.container6.Name = "container6";
+            this.container6.Padding = new System.Windows.Forms.Padding(3);
+            this.container6.Size = new System.Drawing.Size(133, 58);
+            this.container6.TabIndex = 383;
+            // 
+            // lbox_PreCombatBuffs
+            // 
+            this.lbox_PreCombatBuffs.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbox_PreCombatBuffs.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbox_PreCombatBuffs.FormattingEnabled = true;
+            this.lbox_PreCombatBuffs.Location = new System.Drawing.Point(3, 3);
+            this.lbox_PreCombatBuffs.Name = "lbox_PreCombatBuffs";
+            this.lbox_PreCombatBuffs.Size = new System.Drawing.Size(127, 52);
+            this.lbox_PreCombatBuffs.TabIndex = 355;
+            this.lbox_PreCombatBuffs.DoubleClick += new System.EventHandler(this.lbox_PreCombatBuffs_DoubleClick);
+            // 
             // btn_DeleteTemplate
             // 
             this.btn_DeleteTemplate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_DeleteTemplate.Location = new System.Drawing.Point(266, 35);
+            this.btn_DeleteTemplate.Location = new System.Drawing.Point(420, 28);
             this.btn_DeleteTemplate.Name = "btn_DeleteTemplate";
             this.btn_DeleteTemplate.Size = new System.Drawing.Size(48, 23);
             this.btn_DeleteTemplate.TabIndex = 379;
             this.btn_DeleteTemplate.Text = "Delete";
             this.btn_DeleteTemplate.UseVisualStyleBackColor = true;
             this.btn_DeleteTemplate.Click += new System.EventHandler(this.btn_DeleteTemplate_Click);
+            // 
+            // container5
+            // 
+            this.container5.Controls.Add(this.lbox_Rotation);
+            this.container5.Location = new System.Drawing.Point(178, 147);
+            this.container5.Name = "container5";
+            this.container5.Padding = new System.Windows.Forms.Padding(3);
+            this.container5.Size = new System.Drawing.Size(133, 123);
+            this.container5.TabIndex = 382;
+            // 
+            // lbox_Rotation
+            // 
+            this.lbox_Rotation.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbox_Rotation.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbox_Rotation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lbox_Rotation.FormattingEnabled = true;
+            this.lbox_Rotation.Location = new System.Drawing.Point(3, 3);
+            this.lbox_Rotation.Name = "lbox_Rotation";
+            this.lbox_Rotation.Size = new System.Drawing.Size(127, 117);
+            this.lbox_Rotation.TabIndex = 346;
+            this.lbox_Rotation.DoubleClick += new System.EventHandler(this.lbox_Rotation_DoubleClick);
+            // 
+            // container4
+            // 
+            this.container4.Controls.Add(this.lbox_AllSkills);
+            this.container4.Location = new System.Drawing.Point(21, 147);
+            this.container4.Name = "container4";
+            this.container4.Padding = new System.Windows.Forms.Padding(3);
+            this.container4.Size = new System.Drawing.Size(133, 214);
+            this.container4.TabIndex = 381;
+            // 
+            // lbox_AllSkills
+            // 
+            this.lbox_AllSkills.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbox_AllSkills.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbox_AllSkills.FormattingEnabled = true;
+            this.lbox_AllSkills.Location = new System.Drawing.Point(3, 3);
+            this.lbox_AllSkills.Name = "lbox_AllSkills";
+            this.lbox_AllSkills.Size = new System.Drawing.Size(127, 208);
+            this.lbox_AllSkills.TabIndex = 347;
+            // 
+            // container3
+            // 
+            this.container3.Controls.Add(this.lbox_Combos);
+            this.container3.Location = new System.Drawing.Point(370, 320);
+            this.container3.Name = "container3";
+            this.container3.Padding = new System.Windows.Forms.Padding(3);
+            this.container3.Size = new System.Drawing.Size(133, 136);
+            this.container3.TabIndex = 380;
+            // 
+            // lbox_Combos
+            // 
+            this.lbox_Combos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbox_Combos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbox_Combos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lbox_Combos.FormattingEnabled = true;
+            this.lbox_Combos.Location = new System.Drawing.Point(3, 3);
+            this.lbox_Combos.Name = "lbox_Combos";
+            this.lbox_Combos.Size = new System.Drawing.Size(127, 130);
+            this.lbox_Combos.TabIndex = 363;
+            this.lbox_Combos.DoubleClick += new System.EventHandler(this.lbox_Combos_DoubleClick);
             // 
             // btn_MoveCombatBuffsUp
             // 
@@ -359,26 +606,6 @@
             this.btn_MoveCombatBuffsDown.UseVisualStyleBackColor = true;
             this.btn_MoveCombatBuffsDown.Click += new System.EventHandler(this.btn_MoveCombatBuffsDown_Click);
             // 
-            // btn_ImportTemplate
-            // 
-            this.btn_ImportTemplate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ImportTemplate.Location = new System.Drawing.Point(320, 35);
-            this.btn_ImportTemplate.Name = "btn_ImportTemplate";
-            this.btn_ImportTemplate.Size = new System.Drawing.Size(48, 23);
-            this.btn_ImportTemplate.TabIndex = 378;
-            this.btn_ImportTemplate.Text = "Import";
-            this.btn_ImportTemplate.UseVisualStyleBackColor = true;
-            this.btn_ImportTemplate.Click += new System.EventHandler(this.btn_ImportTemplate_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(18, 18);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(51, 13);
-            this.label9.TabIndex = 375;
-            this.label9.Text = "Template";
-            // 
             // btn_MovePreCombatBuffsUp
             // 
             this.btn_MovePreCombatBuffsUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -389,17 +616,6 @@
             this.btn_MovePreCombatBuffsUp.TabIndex = 369;
             this.btn_MovePreCombatBuffsUp.UseVisualStyleBackColor = true;
             this.btn_MovePreCombatBuffsUp.Click += new System.EventHandler(this.btn_MovePreCombatBuffsUp_Click);
-            // 
-            // btn_SaveTemplate
-            // 
-            this.btn_SaveTemplate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_SaveTemplate.Location = new System.Drawing.Point(216, 35);
-            this.btn_SaveTemplate.Name = "btn_SaveTemplate";
-            this.btn_SaveTemplate.Size = new System.Drawing.Size(44, 23);
-            this.btn_SaveTemplate.TabIndex = 376;
-            this.btn_SaveTemplate.Text = "Save";
-            this.btn_SaveTemplate.UseVisualStyleBackColor = true;
-            this.btn_SaveTemplate.Click += new System.EventHandler(this.btn_SaveTemplate_Click);
             // 
             // btn_MovePreCombatBuffsDown
             // 
@@ -460,7 +676,7 @@
             // 
             this.btn_MoveCombosUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_MoveCombosUp.Image = global::Fighter.Properties.Resources.arrow_up;
-            this.btn_MoveCombosUp.Location = new System.Drawing.Point(509, 295);
+            this.btn_MoveCombosUp.Location = new System.Drawing.Point(509, 320);
             this.btn_MoveCombosUp.Name = "btn_MoveCombosUp";
             this.btn_MoveCombosUp.Size = new System.Drawing.Size(29, 18);
             this.btn_MoveCombosUp.TabIndex = 362;
@@ -471,7 +687,7 @@
             // 
             this.btn_MoveCombosDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_MoveCombosDown.Image = global::Fighter.Properties.Resources.arrow_down;
-            this.btn_MoveCombosDown.Location = new System.Drawing.Point(509, 312);
+            this.btn_MoveCombosDown.Location = new System.Drawing.Point(509, 337);
             this.btn_MoveCombosDown.Name = "btn_MoveCombosDown";
             this.btn_MoveCombosDown.Size = new System.Drawing.Size(29, 18);
             this.btn_MoveCombosDown.TabIndex = 361;
@@ -480,12 +696,12 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.container2);
-            this.tabPage3.Controls.Add(this.container11);
-            this.tabPage3.Controls.Add(this.label13);
+            this.tabPage3.Controls.Add(this.label12);
             this.tabPage3.Controls.Add(this.label4);
             this.tabPage3.Controls.Add(this.btn_AddToIgnoredMobs);
-            this.tabPage3.Controls.Add(this.container9);
+            this.tabPage3.Controls.Add(this.container1);
+            this.tabPage3.Controls.Add(this.container2);
+            this.tabPage3.Controls.Add(this.container11);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -494,20 +710,21 @@
             this.tabPage3.Text = "Targets";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // label13
+            // label12
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(18, 18);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(45, 13);
-            this.label13.TabIndex = 375;
-            this.label13.Text = "Settings";
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.Color.DimGray;
+            this.label12.Location = new System.Drawing.Point(29, 20);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(45, 13);
+            this.label12.TabIndex = 380;
+            this.label12.Text = "Settings";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(327, 20);
+            this.label4.Location = new System.Drawing.Point(327, 19);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 13);
             this.label4.TabIndex = 370;
@@ -524,164 +741,68 @@
             this.btn_AddToIgnoredMobs.UseVisualStyleBackColor = true;
             this.btn_AddToIgnoredMobs.Click += new System.EventHandler(this.button_AddToIgnoredMobs_Click);
             // 
-            // tabPage4
-            // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(561, 504);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Statistics";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
             // container1
             // 
-            this.container1.Location = new System.Drawing.Point(21, 35);
+            this.container1.Controls.Add(this.label7);
+            this.container1.Controls.Add(this.container13);
+            this.container1.Controls.Add(this.chkbox_Loot);
+            this.container1.Location = new System.Drawing.Point(21, 27);
             this.container1.Name = "container1";
-            this.container1.Size = new System.Drawing.Size(521, 124);
-            this.container1.TabIndex = 377;
+            this.container1.Padding = new System.Windows.Forms.Padding(12);
+            this.container1.Size = new System.Drawing.Size(284, 126);
+            this.container1.TabIndex = 379;
             // 
-            // container14
+            // label7
             // 
-            this.container14.Controls.Add(this.cmbox_Templates);
-            this.container14.Location = new System.Drawing.Point(21, 35);
-            this.container14.Name = "container14";
-            this.container14.Padding = new System.Windows.Forms.Padding(3);
-            this.container14.Size = new System.Drawing.Size(139, 27);
-            this.container14.TabIndex = 386;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 20);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(63, 13);
+            this.label7.TabIndex = 374;
+            this.label7.Text = "Zone radius";
             // 
-            // cmbox_Templates
+            // container13
             // 
-            this.cmbox_Templates.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cmbox_Templates.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbox_Templates.FormattingEnabled = true;
-            this.cmbox_Templates.Location = new System.Drawing.Point(3, 3);
-            this.cmbox_Templates.Name = "cmbox_Templates";
-            this.cmbox_Templates.Size = new System.Drawing.Size(133, 21);
-            this.cmbox_Templates.TabIndex = 374;
+            this.container13.Controls.Add(this.num_ZoneRadius);
+            this.container13.Location = new System.Drawing.Point(15, 37);
+            this.container13.Name = "container13";
+            this.container13.Padding = new System.Windows.Forms.Padding(2);
+            this.container13.Size = new System.Drawing.Size(82, 20);
+            this.container13.TabIndex = 378;
             // 
-            // container8
+            // num_ZoneRadius
             // 
-            this.container8.Controls.Add(this.lbox_ComboTriggers);
-            this.container8.Location = new System.Drawing.Point(370, 147);
-            this.container8.Name = "container8";
-            this.container8.Padding = new System.Windows.Forms.Padding(3);
-            this.container8.Size = new System.Drawing.Size(133, 97);
-            this.container8.TabIndex = 385;
+            this.num_ZoneRadius.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.num_ZoneRadius.Dock = System.Windows.Forms.DockStyle.Top;
+            this.num_ZoneRadius.Location = new System.Drawing.Point(2, 2);
+            this.num_ZoneRadius.Maximum = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
+            this.num_ZoneRadius.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.num_ZoneRadius.Name = "num_ZoneRadius";
+            this.num_ZoneRadius.Size = new System.Drawing.Size(78, 16);
+            this.num_ZoneRadius.TabIndex = 373;
+            this.num_ZoneRadius.Value = new decimal(new int[] {
+            60,
+            0,
+            0,
+            0});
             // 
-            // lbox_ComboTriggers
+            // chkbox_Loot
             // 
-            this.lbox_ComboTriggers.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lbox_ComboTriggers.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbox_ComboTriggers.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lbox_ComboTriggers.FormattingEnabled = true;
-            this.lbox_ComboTriggers.Location = new System.Drawing.Point(3, 3);
-            this.lbox_ComboTriggers.Name = "lbox_ComboTriggers";
-            this.lbox_ComboTriggers.Size = new System.Drawing.Size(127, 91);
-            this.lbox_ComboTriggers.TabIndex = 360;
-            this.lbox_ComboTriggers.SelectedIndexChanged += new System.EventHandler(this.lbox_ComboTriggers_SelectedIndexChanged);
-            this.lbox_ComboTriggers.DoubleClick += new System.EventHandler(this.lbox_ComboTriggers_DoubleClick);
-            // 
-            // container7
-            // 
-            this.container7.Controls.Add(this.lbox_CombatBuffs);
-            this.container7.Location = new System.Drawing.Point(178, 320);
-            this.container7.Name = "container7";
-            this.container7.Padding = new System.Windows.Forms.Padding(3);
-            this.container7.Size = new System.Drawing.Size(133, 58);
-            this.container7.TabIndex = 384;
-            // 
-            // lbox_CombatBuffs
-            // 
-            this.lbox_CombatBuffs.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lbox_CombatBuffs.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbox_CombatBuffs.FormattingEnabled = true;
-            this.lbox_CombatBuffs.Location = new System.Drawing.Point(3, 3);
-            this.lbox_CombatBuffs.Name = "lbox_CombatBuffs";
-            this.lbox_CombatBuffs.Size = new System.Drawing.Size(127, 52);
-            this.lbox_CombatBuffs.TabIndex = 356;
-            this.lbox_CombatBuffs.DoubleClick += new System.EventHandler(this.lbox_CombatBuffs_DoubleClick);
-            // 
-            // container6
-            // 
-            this.container6.Controls.Add(this.lbox_PreCombatBuffs);
-            this.container6.Location = new System.Drawing.Point(178, 428);
-            this.container6.Name = "container6";
-            this.container6.Padding = new System.Windows.Forms.Padding(3);
-            this.container6.Size = new System.Drawing.Size(133, 58);
-            this.container6.TabIndex = 383;
-            // 
-            // lbox_PreCombatBuffs
-            // 
-            this.lbox_PreCombatBuffs.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lbox_PreCombatBuffs.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbox_PreCombatBuffs.FormattingEnabled = true;
-            this.lbox_PreCombatBuffs.Location = new System.Drawing.Point(3, 3);
-            this.lbox_PreCombatBuffs.Name = "lbox_PreCombatBuffs";
-            this.lbox_PreCombatBuffs.Size = new System.Drawing.Size(127, 52);
-            this.lbox_PreCombatBuffs.TabIndex = 355;
-            this.lbox_PreCombatBuffs.DoubleClick += new System.EventHandler(this.lbox_PreCombatBuffs_DoubleClick);
-            // 
-            // container5
-            // 
-            this.container5.Controls.Add(this.lbox_Rotation);
-            this.container5.Location = new System.Drawing.Point(178, 147);
-            this.container5.Name = "container5";
-            this.container5.Padding = new System.Windows.Forms.Padding(3);
-            this.container5.Size = new System.Drawing.Size(133, 123);
-            this.container5.TabIndex = 382;
-            // 
-            // lbox_Rotation
-            // 
-            this.lbox_Rotation.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lbox_Rotation.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbox_Rotation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lbox_Rotation.FormattingEnabled = true;
-            this.lbox_Rotation.Location = new System.Drawing.Point(3, 3);
-            this.lbox_Rotation.Name = "lbox_Rotation";
-            this.lbox_Rotation.Size = new System.Drawing.Size(127, 117);
-            this.lbox_Rotation.TabIndex = 346;
-            this.lbox_Rotation.DoubleClick += new System.EventHandler(this.lbox_Rotation_DoubleClick);
-            // 
-            // container4
-            // 
-            this.container4.Controls.Add(this.lbox_AllSkills);
-            this.container4.Location = new System.Drawing.Point(21, 147);
-            this.container4.Name = "container4";
-            this.container4.Padding = new System.Windows.Forms.Padding(3);
-            this.container4.Size = new System.Drawing.Size(133, 188);
-            this.container4.TabIndex = 381;
-            // 
-            // lbox_AllSkills
-            // 
-            this.lbox_AllSkills.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lbox_AllSkills.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbox_AllSkills.FormattingEnabled = true;
-            this.lbox_AllSkills.Location = new System.Drawing.Point(3, 3);
-            this.lbox_AllSkills.Name = "lbox_AllSkills";
-            this.lbox_AllSkills.Size = new System.Drawing.Size(127, 182);
-            this.lbox_AllSkills.TabIndex = 347;
-            // 
-            // container3
-            // 
-            this.container3.Controls.Add(this.lbox_Combos);
-            this.container3.Location = new System.Drawing.Point(370, 295);
-            this.container3.Name = "container3";
-            this.container3.Padding = new System.Windows.Forms.Padding(3);
-            this.container3.Size = new System.Drawing.Size(133, 136);
-            this.container3.TabIndex = 380;
-            // 
-            // lbox_Combos
-            // 
-            this.lbox_Combos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lbox_Combos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbox_Combos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lbox_Combos.FormattingEnabled = true;
-            this.lbox_Combos.Location = new System.Drawing.Point(3, 3);
-            this.lbox_Combos.Name = "lbox_Combos";
-            this.lbox_Combos.Size = new System.Drawing.Size(127, 130);
-            this.lbox_Combos.TabIndex = 363;
-            this.lbox_Combos.DoubleClick += new System.EventHandler(this.lbox_Combos_DoubleClick);
+            this.chkbox_Loot.AutoSize = true;
+            this.chkbox_Loot.Location = new System.Drawing.Point(126, 20);
+            this.chkbox_Loot.Name = "chkbox_Loot";
+            this.chkbox_Loot.Size = new System.Drawing.Size(75, 17);
+            this.chkbox_Loot.TabIndex = 376;
+            this.chkbox_Loot.Text = "Loot mobs";
+            this.chkbox_Loot.UseVisualStyleBackColor = true;
             // 
             // container2
             // 
@@ -723,121 +844,15 @@
             this.lbox_IgnoredMobs.TabIndex = 368;
             this.lbox_IgnoredMobs.DoubleClick += new System.EventHandler(this.lbox_IgnoredMobs_DoubleClick);
             // 
-            // container9
+            // tabPage4
             // 
-            this.container9.Controls.Add(this.chkbox_Loot);
-            this.container9.Controls.Add(this.label14);
-            this.container9.Controls.Add(this.container13);
-            this.container9.Controls.Add(this.container12);
-            this.container9.Controls.Add(this.label11);
-            this.container9.Controls.Add(this.container10);
-            this.container9.Controls.Add(this.label7);
-            this.container9.Location = new System.Drawing.Point(21, 35);
-            this.container9.Name = "container9";
-            this.container9.Padding = new System.Windows.Forms.Padding(12);
-            this.container9.Size = new System.Drawing.Size(284, 297);
-            this.container9.TabIndex = 374;
-            // 
-            // chkbox_Loot
-            // 
-            this.chkbox_Loot.AutoSize = true;
-            this.chkbox_Loot.Location = new System.Drawing.Point(123, 163);
-            this.chkbox_Loot.Name = "chkbox_Loot";
-            this.chkbox_Loot.Size = new System.Drawing.Size(75, 17);
-            this.chkbox_Loot.TabIndex = 376;
-            this.chkbox_Loot.Text = "Loot mobs";
-            this.chkbox_Loot.UseVisualStyleBackColor = true;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(23, 65);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(81, 13);
-            this.label14.TabIndex = 377;
-            this.label14.Text = "Manual settings";
-            // 
-            // container13
-            // 
-            this.container13.Controls.Add(this.num_ZoneRadius);
-            this.container13.Location = new System.Drawing.Point(15, 163);
-            this.container13.Name = "container13";
-            this.container13.Padding = new System.Windows.Forms.Padding(2);
-            this.container13.Size = new System.Drawing.Size(82, 20);
-            this.container13.TabIndex = 378;
-            // 
-            // num_ZoneRadius
-            // 
-            this.num_ZoneRadius.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.num_ZoneRadius.Dock = System.Windows.Forms.DockStyle.Top;
-            this.num_ZoneRadius.Location = new System.Drawing.Point(2, 2);
-            this.num_ZoneRadius.Maximum = new decimal(new int[] {
-            200,
-            0,
-            0,
-            0});
-            this.num_ZoneRadius.Minimum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.num_ZoneRadius.Name = "num_ZoneRadius";
-            this.num_ZoneRadius.Size = new System.Drawing.Size(78, 16);
-            this.num_ZoneRadius.TabIndex = 373;
-            this.num_ZoneRadius.Value = new decimal(new int[] {
-            60,
-            0,
-            0,
-            0});
-            // 
-            // container12
-            // 
-            this.container12.Controls.Add(this.cmbox_Mode);
-            this.container12.Location = new System.Drawing.Point(15, 29);
-            this.container12.Name = "container12";
-            this.container12.Padding = new System.Windows.Forms.Padding(3);
-            this.container12.Size = new System.Drawing.Size(99, 27);
-            this.container12.TabIndex = 378;
-            // 
-            // cmbox_Mode
-            // 
-            this.cmbox_Mode.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cmbox_Mode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbox_Mode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbox_Mode.FormattingEnabled = true;
-            this.cmbox_Mode.Items.AddRange(new object[] {
-            "Auto",
-            "Manual"});
-            this.cmbox_Mode.Location = new System.Drawing.Point(3, 3);
-            this.cmbox_Mode.Name = "cmbox_Mode";
-            this.cmbox_Mode.Size = new System.Drawing.Size(93, 21);
-            this.cmbox_Mode.TabIndex = 372;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(12, 12);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(59, 13);
-            this.label11.TabIndex = 375;
-            this.label11.Text = "Fight mode";
-            // 
-            // container10
-            // 
-            this.container10.Location = new System.Drawing.Point(15, 72);
-            this.container10.Name = "container10";
-            this.container10.Padding = new System.Windows.Forms.Padding(12);
-            this.container10.Size = new System.Drawing.Size(254, 46);
-            this.container10.TabIndex = 376;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 146);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(63, 13);
-            this.label7.TabIndex = 374;
-            this.label7.Text = "Zone radius";
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(561, 504);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Statistics";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // Window
             // 
@@ -852,10 +867,11 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.container9.ResumeLayout(false);
+            this.container9.PerformLayout();
+            this.container12.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
             this.container14.ResumeLayout(false);
             this.container8.ResumeLayout(false);
             this.container7.ResumeLayout(false);
@@ -863,13 +879,14 @@
             this.container5.ResumeLayout(false);
             this.container4.ResumeLayout(false);
             this.container3.ResumeLayout(false);
-            this.container2.ResumeLayout(false);
-            this.container11.ResumeLayout(false);
-            this.container9.ResumeLayout(false);
-            this.container9.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            this.container1.ResumeLayout(false);
+            this.container1.PerformLayout();
             this.container13.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.num_ZoneRadius)).EndInit();
-            this.container12.ResumeLayout(false);
+            this.container2.ResumeLayout(false);
+            this.container11.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -907,7 +924,6 @@
         public System.Windows.Forms.Button btn_MovePreCombatBuffsDown;
         public System.Windows.Forms.Button btn_MoveCombatBuffsUp;
         public System.Windows.Forms.Button btn_MoveCombatBuffsDown;
-        private System.Windows.Forms.Label label9;
         public System.Windows.Forms.Button btn_LoadTemplate;
         public System.Windows.Forms.Button btn_SaveTemplate;
         public System.Windows.Forms.ComboBox cmbox_Templates;
@@ -920,8 +936,6 @@
         public System.Windows.Forms.Button btn_AddToIgnoredMobs;
         public System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label10;
-        private Container container1;
         public System.Windows.Forms.NumericUpDown num_ZoneRadius;
         private System.Windows.Forms.Label label11;
         public System.Windows.Forms.CheckBox chkbox_Loot;
@@ -931,7 +945,6 @@
         private Container container7;
         private Container container6;
         private Container container8;
-        private System.Windows.Forms.Label label13;
         private Container container9;
         private Container container10;
         private System.Windows.Forms.Label label14;
@@ -941,5 +954,10 @@
         private Container container13;
         private System.Windows.Forms.TabPage tabPage4;
         private Container container14;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label12;
+        private Container container1;
+        private System.Windows.Forms.Label label9;
+        private Container container15;
     }
 }
