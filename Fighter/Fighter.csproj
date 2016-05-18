@@ -33,7 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ArcheBuddy">
-      <HintPath>C:\Users\Netskyes\Desktop\ArcheBuddy\ArcheBuddy.dll</HintPath>
+      <HintPath>C:\Users\SumYungHo\Desktop\ArcheBuddy\ArcheBuddy.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

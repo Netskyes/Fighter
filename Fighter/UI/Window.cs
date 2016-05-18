@@ -240,8 +240,9 @@ namespace Fighter
             });
         }
 
-            
-        {
+        
+        private void CombosMove(int direction) {
+
             Utils.InvokeOn(lbox_Combos, () => Utils.InvokeOn(lbox_ComboTriggers, () =>
             {
                 if (lbox_Combos.SelectedItem != null && lbox_ComboTriggers.SelectedItem != null)
